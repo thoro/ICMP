@@ -66,7 +66,7 @@ namespace Ping
             int count = echoCount.Value;
 
             Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Raw, ProtocolType.Icmp);
-            s.ReceiveTimeout = 2000;
+            s.ReceiveTimeout = timeout.Value;
 
             Console.WriteLine("Pinging " + ip + " with " + dataLen + " bytes of data:");
 

@@ -82,7 +82,7 @@ Options:
             int waitTime = timeout.Value;
 
             Socket s = new Socket(AddressFamily.InterNetwork, SocketType.Raw, ProtocolType.Icmp);
-            s.ReceiveTimeout = 2000;
+            s.ReceiveTimeout = timeout.Value;
 
             Console.WriteLine("Tracing route to {0} [{1}]", name, ip);
             Console.WriteLine("over a maximum of {0} hops:", maximumHops.Value);
